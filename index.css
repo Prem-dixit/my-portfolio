@@ -1,0 +1,302 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'poppins', sans-serif;
+ }
+
+ body {
+     color: #ededed;
+     background: #081b29;
+     overflow-x: hidden;
+ }
+
+ /* --- HEADER --- */
+ .header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 10%;
+     background: rgb(7, 7, 63);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+ }
+
+ .logo {
+     font-size: 25px;
+     color: #fff;
+     text-decoration: none;
+     font-weight: 600;
+ }
+
+ .navbar a {
+     display: inline-block;
+     font-size: 18px;
+     color: #fff;
+     text-decoration: none;
+     font-weight: 500;
+     margin-left: 25px;
+     transition: .3s;
+ }
+
+ .navbar a:hover {
+     color: #0ef;
+ }
+
+ /* --- SECTIONS COMMON --- */
+ section {
+     padding: 100px 10% 40px;
+     min-height: 100vh;
+ }
+
+ /* --- HOME --- */
+
+ .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    
+    /* Animation fix */
+    opacity: 1;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 15px #0ef;
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.home-sci a i {
+    display: block; 
+}
+
+
+
+
+ .home-content h3 span.text {
+    font-size: 30px; /* Size yahan se bada hoga */
+    font-weight: 700; /* Text thoda mota dikhega */
+    color: #0ef;
+    text-shadow: 0 0 10px #0ef; /* Neon glow effect */
+}
+.text {
+    font-size: clamp(28px, 5vw, 45px); 
+}
+ .home {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 2rem;
+
+ }
+
+ .home-content {
+     flex: 1 1 400px;
+ }
+
+ .home-content h1 {
+     font-size: clamp(35px, 8vw, 56px);
+     margin: 10px 0;
+ }
+
+ .home-img-container {
+     flex: 1 1 400px;
+     text-align: center;
+ }
+
+ .home-img-container img {
+     max-width: 80%;
+     height: auto;
+     border-radius: 20px;
+     box-shadow: 0 0 20px #0ef;
+ }
+
+ /* --- ABOUT (CIRCLE IMAGE FIX) --- */
+ .about {
+     display: flex;
+     flex-wrap: wrap-reverse;
+     gap: 3rem;
+     align-items: center;
+ }
+
+ .about-img {
+     flex: 1 1 300px;
+     display: flex;
+     justify-content: center;
+ }
+
+ .about-img img {
+     width: 250px;
+     /* Chota size */
+     height: 250px;
+     /* Square dimensions for perfect circle */
+     object-fit: cover;
+     /* Image kategi nahi, adjust ho jayegi */
+     border-radius: 50%;
+     /* Pure Circle */
+     border: 5px solid #0ef;
+     /* Neon Border */
+     box-shadow: 0 0 25px #0ef;
+     /* Glow effect */
+ }
+
+ .about-text {
+     flex: 1 1 400px;
+ }
+
+ .about-text h2 {
+     font-size: 50px;
+     color: red;
+ }
+
+ .about-text h2 span {
+     color: #0ef;
+ }
+
+ /* --- SERVICES --- */
+ .sub-title {
+     text-align: center;
+     font-size: 50px;
+     margin-bottom: 50px;
+ }
+
+ .sub-title span {
+     color: #0ef;
+ }
+
+ .services-list {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 30px;
+ }
+
+ .services-list div {
+     padding: 30px;
+     background: rgba(1, 34, 144, 0.3);
+     border-radius: 20px;
+     box-shadow: 1px 1px 20px #012290;
+     transition: 0.5s;
+ }
+
+ .services-list div:hover {
+     transform: translateY(-10px);
+     background: rgba(0, 238, 255, 0.1);
+ }
+
+ /* --- SKILLS (ALL SKILLS ADDED) --- */
+ .skills-list {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 30px;
+ }
+
+ .skills-item {
+     margin-bottom: 15px;
+ }
+
+ .wrapper {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 8px;
+     font-weight: 500;
+ }
+
+ .skills-progress-box {
+     background: #fff;
+     height: 10px;
+     border-radius: 10px;
+ }
+
+ .skills-progress {
+     background: #0ef;
+     height: 100%;
+     border-radius: inherit;
+     box-shadow: 0 0 10px #0ef;
+ }
+
+ /* --- CONTACT (ACTIVE FORM) --- */
+ .contact-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 3rem;
+     background: #07073f;
+     padding: 40px;
+     border-radius: 20px;
+ }
+
+ .contact-info,
+ .contact-form-box {
+     flex: 1 1 400px;
+ }
+
+ .contact-form-box input,
+ .contact-form-box textarea {
+     width: 100%;
+     padding: 15px;
+     margin-bottom: 15px;
+     background: #081b29;
+     border: 1px solid #0ef;
+     color: white;
+     border-radius: 8px;
+ }
+
+ .btn-submit {
+     width: 100%;
+     padding: 12px;
+     background: #0ef;
+     color: #081b29;
+     font-weight: 600;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     box-shadow: 0 0 15px #0ef;
+ }
+
+ /* --- MOBILE FIXES --- */
+ @media (max-width: 768px) {
+     .header {
+         padding: 15px 5%;
+     }
+
+     .navbar {
+         display: none;
+     }
+
+     section {
+         padding: 80px 5% 20px;
+         text-align: center;
+     }
+
+     .about-text h2,
+     .sub-title {
+         font-size: 35px;
+     }
+
+     .about-img img {
+         width: 200px;
+         height: 200px;
+     }
+
+     
+ }
