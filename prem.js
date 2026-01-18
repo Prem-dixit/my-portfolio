@@ -29,7 +29,7 @@ var typed =new Typed(".text",{
         });
 
         if (response.ok) {
-            alert('Shukriya Prem! Aapka message mil gaya hai.');
+            alert('Shukriya ! Aapka message mil gaya hai.');
             contactForm.reset(); // Form khali kar dega
         } else {
             alert('Oops! Kuch galti ho gayi. Check karo ki ID sahi hai ya nahi.');
